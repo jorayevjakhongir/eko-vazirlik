@@ -2,61 +2,88 @@ import React from "react";
 
 function Navbar() {
   return (
-    <nav
-      class="flex items-center justify-between p-6 lg:px-8"
-      aria-label="Global"
-    >
-      <div class="flex lg:flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          <img
-            class="h-8 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt=""
-          />
-        </a>
-      </div>
-      <div class="flex lg:hidden">
-        <button
-          type="button"
-          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-        >
-          <span class="sr-only">Open main menu</span>
-          <svg
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
-        </button>
-      </div>
-      <div class="hidden lg:flex lg:gap-x-12">
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">
-          Product
-        </a>
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">
-          Features
-        </a>
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">
-          Marketplace
-        </a>
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">
-          Company
-        </a>
-      </div>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">
-          Log in <span aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
+    <nav className="gene-nav">
+      <ul className="menu">
+        <li className="has-dropdown">
+          <a href="javascript:void(0)">Home</a>
+          <ul>
+            <li>
+              <a href="index.html">Homepage V1</a>
+            </li>
+            <li>
+              <a href="index-2.html">Homepage V2</a>
+            </li>
+            <li>
+              <a href="index-3.html">Homepage V3</a>
+            </li>
+          </ul>
+        </li>
+        <li className="has-dropdown">
+          <a href="javascript:void(0)">Adventures</a>
+          <ul>
+            <li>
+              <a href="adventure-1.html">Adventure List One</a>
+            </li>
+            <li>
+              <a href="adventure-2.html">Adventure List Two</a>
+            </li>
+            <li>
+              <a href="adventure-3.html">Adventure List Three</a>
+            </li>
+            <li>
+              <a href="adventure-detail-1.html">Adventure Details</a>
+            </li>
+          </ul>
+        </li>
+        <li className="has-dropdown">
+          <a href="javascript:void(0)">Blog</a>
+          <ul>
+            <li>
+              <a href="blog-1.html">Blog List One</a>
+            </li>
+            <li>
+              <a href="blog-2.html">Blog List Two</a>
+            </li>
+            <li>
+              <a href="blog-grid.html">Blog Grid</a>
+            </li>
+            <li>
+              <a href="blog-details.html">Blog Details</a>
+            </li>
+          </ul>
+        </li>
+        <li className="has-dropdown">
+          <a href="javascript:void(0)">Other Pages</a>
+          <ul>
+            <li>
+              <a href="about.html">About Us</a>{" "}
+            </li>
+            <li>
+              <a href="login.html">Log In</a>{" "}
+            </li>
+            <li>
+              <a href="signup.html">Sign Up</a>{" "}
+            </li>
+            <li>
+              <a href="404.html">Error</a>{" "}
+            </li>
+          </ul>
+        </li>
+        <li className="has-dropdown">
+          <a href="javascript:void(0)">Cart Pages</a>
+          <ul>
+            <li>
+              <a href="cart.html">Cart</a>
+            </li>
+            <li>
+              <a href="check-out.html">Check Out</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
     </nav>
   );
 }

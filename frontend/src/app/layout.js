@@ -1,5 +1,14 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
+import Script from "next/script";
+import "./globals.css"; // Global CSS imports
+import "./css/animate.min.css";
+import "./css/bootstrap.min.css";
+import "./css/cssanimation.min.css";
+import "./css/default.css";
+import "./css/meanmenu.min.css";
+import "./css/owl-carousel.min.css";
+import "./css/responsive.css";
+import "./css/style.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +20,26 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <Script
+          src="/js/vendor/jquery-3.3.1.min.js"
+          strategy="beforeInteractive"
+        />
+        <Script src="/js/bootstrap.min.js" strategy="beforeInteractive" />
+        <Script src="/js/popper.min.js" strategy="beforeInteractive" />
+        <Script src="/js/owlcarousel.min.js" strategy="beforeInteractive" />
+        <Script src="/js/meanmenu.min.js" strategy="beforeInteractive" />
+        <Script src="/js/counterup.min.js" strategy="beforeInteractive" />
+        <Script src="/js/scrollup.min.js" strategy="beforeInteractive" />
+        <Script src="/js/waypoints.min.js" strategy="beforeInteractive" />
+        <Script
+          src="/js/imagesloaded.pkgd.min.js"
+          strategy="beforeInteractive"
+        />
+        <Script src="/js/isotope.min.js" strategy="beforeInteractive" />
+        <Script src="/js/main.js" strategy="beforeInteractive" />
+      </body>
     </html>
   );
 }
