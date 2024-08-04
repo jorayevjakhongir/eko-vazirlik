@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> <title>Регистрация</title><%- include('./partials/head'); %></head>
+  <body>
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+        your experience.
+      </p>
+    <![endif]-->
+    <!-- Start Preloader -->
+    <%- include('./partials/preloader'); %>
+    <!-- End Preloader -->
+    <!-- Start Wrapper -->
+    <div class="wrapper">
+      <header id="header" class="header-area style-2 header-border absulate-header"><%- include('./partials/header'); %></header>
+      <div class="bradcumb-area cart overlay-bg-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <!-- Start bradcumb -->
+                    <div class="bradcumb text-center">
+                        <h3>Регистрация</h3>
+                        <ul>
+                            <li><a href="/">Главная</a></li>
+                            <li>Регистрация</li>
+                        </ul>
+                    </div>
+                    <!-- End bradcumb -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Bradcumb Area -->
+    <!-- Start Sign Up Area -->
+    <div class="login-area pt-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-5 col-md-5">
+                    <img class="mb-5" src="img/about/11.jpeg" alt="">
+                </div>
+                <div class="col-xl-6 col-lg-7 col-md-7">
+                    <!-- Start section title -->
+                    <div class="section-title font-s30">
+                        <h2>СОЗДАТЬ НОВЫЙ АККАУНТ</h2>
+                    </div>
+                    <!-- End section title -->
+                    <div class="login-form">
+                        <form action="#" class="gane-form">
+                            <!-- start field left -->
+                            <div class="form-left">
+                                <!-- Start Single Field -->
+                                <div class="single-field">
+                                    <input type="text" class="form-control" id="usr" placeholder="Имя *">
+                                </div>
+                                <!-- End Single Field -->
+                                <!-- Start Single Field -->
+                                <div class="single-field">
+                                    <input type="text" class="form-control" id="usr" placeholder="Ваш номер телефона *">
+                                </div>
+                                <!-- Start Single Field -->
+                                <div class="single-field ">
+                                    <input type="email" class="form-control" id="usr" placeholder="Пароль *">
+                                </div>
+                                <!-- End Single Field -->
+                                <!-- Start Single Field -->
+                                <div class="single-field">
+                                    <input type="password" class="form-control" id="usr" placeholder="Подтвердить пароль *">
+                                </div>
+                                <!-- End Single Field -->
+                                <div class="password">
+                                    <p class="aggri"><input type="checkbox">Я соглашаюсь со всеми правилами сайта</p>
+                                </div>
+                                <button class="btn btn-theme" type="submit">Создать аккаунт</button> 
+                            </div>
+                            <!-- End field left -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start Partner Area -->
+    <div class="partner-area pt-85 pb-220">
+        <div class="container">
+            <div class="row justify-content-center">
+            </div>
+        </div>
+    </div>
+      <%- include('./partials/footer'); %>
+  </body>
+</html>
