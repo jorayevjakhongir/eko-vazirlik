@@ -7,16 +7,16 @@ module.exports.signup_get = (req, res) => {
 
 // Handle user signup
 module.exports.signup_post = async (req, res) => {
-  const { phoneNumber, fullName, password, confirmPassword } = req.body;
+  const { phoneNumber, fullName, password, confirm_password, role } = req.body;
   console.log(req.body);
 
-  if (password !== confirmPassword) {
+  if (password !== confirm_password) {
     return res.status(400).json({ error: "Passwords do not match" });
   }
 
   try {
     // Create a new user instance
-    const user = new User(phoneNumber, fullName, password);
+    const user = new User(phoneNumber, fullName, password, role);
 
     // Save user to database
     const userId = await user.save();
@@ -42,10 +42,17 @@ module.exports.login_post = async (req, res) => {
   const { phoneNumber, password } = req.body;
 
   try {
+    // Perform authentication logic (e.g., check credentials)
     const user = await User.findByCredentials(phoneNumber, password);
-    const token = await user.generateAuthToken();
-    res.send({ user, token });
+    const token = await user.generateAuthToken;
+
+    // Redirect to dashboard or send success response
+    res.render("dashboard", { user, token });
   } catch (error) {
-    res.status(400).send(error.message);
+    console.error("Login error:", error.message);
+    res.status(400).json({ error: "Invalid credentials" }); // Send specific error response
   }
+};
+module.exports.dashboard_get = async (req, res) => {
+  res.render("dashboard");
 };

@@ -54,27 +54,24 @@
 									<li><a class="twiter" href="#"><i class="fab fa-twitter"></i> Login With Twitter</a></li>
 									<li><a class="google" href="#"><i class="fab fa-linkedin-in"></i> Login With Google</a></li>
 								</ul> -->
-								<form action="#" class="gane-form">
+								<form action="/login" method="POST" class="gane-form">
 									<!-- start field left -->
 									<div class="form-left">
 										<!-- Start Single Field -->
 										<div class="single-field">
-											<input type="text" class="form-control" placeholder="номер телефона">
+											<input type="tel" id="phoneNumber" name="phoneNumber" pattern="[+]{1}[9]{1}[9]{1}[8]{1}[0-9]{9}" value="+998" placeholder="+998" required>
 										</div>
 										<!-- End Single Field -->
 										<!-- Start Single Field -->
-		
-										<!-- End Single Field -->
-										<!-- Start Single Field -->
 										<div class="single-field ">
-											<input type="text" class="form-control" placeholder="Пароль">
+											<input type="password" id="password" name="password" class="form-control" placeholder="Пароль" required>
 										</div>
 										<!-- End Single Field -->
 										<div class="password">
 											<p><input type="checkbox">Запомнить пароль</p>
 											<p>Забыли свой <a href="#">пароль?</a></p>
 										</div>
-                    <div class="password"><p><a href="signup">Зарегистрироваться</a></p></div>
+										<div class="password"><p><a href="/signup">Зарегистрироваться</a></p></div>
 										<button class="btn btn-theme" type="submit">Войти</button> 
 									</div>
 									<!-- End field left -->

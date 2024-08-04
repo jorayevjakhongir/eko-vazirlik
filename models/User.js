@@ -2,9 +2,9 @@ const mysql = require("mysql");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const db = require("../db/db.js"); // Assuming db.js exports a MySQL connection pool
-
+const dotenv = require("dotenv").config();
 class User {
-  constructor(phoneNumber, fullName, password, role = "customer") {
+  constructor(phoneNumber, fullName, password, role) {
     this.phoneNumber = phoneNumber;
     this.fullName = fullName;
     this.password = password;
@@ -46,13 +46,12 @@ class User {
   }
 
   async generateAuthToken() {
-    const payload = {
-      phoneNumber: this.phoneNumber,
-      fullName: this.fullName,
-      role: this.role,
-    };
-
-    return jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "1h" });
+    const token = jwt.sign({ id: this.id }, process.env.SECRET_JWT, {
+      algorithm: "HS256",
+      allowInsecureKeySizes: true,
+      expiresIn: 86400, // 24 hours
+    });
+    return token;
   }
 
   static async findByCredentials(phoneNumber, password) {

@@ -57,7 +57,7 @@
                                 <!-- End Single Field -->
                                 <!-- Start Single Field -->
                                 <div class="single-field">
-                                    <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Ваш номер телефона *" required>
+                                    <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[+]{1}[9]{1}[9]{1}[8]{1}[0-9]{9}" value="+998" placeholder="+998" required>
                                 </div>
                                 <!-- Start Single Field -->
                                 <div class="single-field">
@@ -68,7 +68,14 @@
                                 <div class="single-field">
                                     <input type="password" id="confirm_password" name="confirm_password" placeholder="Подтвердить пароль *" required>
                                 </div>
-                                
+                                <div class="single-field">
+                                    <select id="role" name="role" class="form-select" aria-label="Выберите роль" required>
+                                      <option selected disabled>Выберите роль</option>
+                                      <option value="admin">Департамент</option>
+                                      <option value="user">Предприниматель</option>
+                                      <option value="customer">Пользователь</option>
+                                    </select>
+                                </div>
                                 <!-- End Single Field -->
                                 <div class="password">
                                     <p class="aggri"><input type="checkbox">Я соглашаюсь со всеми правилами сайта</p>
