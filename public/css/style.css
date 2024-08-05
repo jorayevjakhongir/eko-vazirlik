@@ -83,6 +83,7 @@ header.header-area.absulate-header {
 }
 /*header top left*/
 .header-top-left {
+  float: right;
   padding: 39px 0 10px;
 }
 header.header-area.style-2 .header-top-left,
@@ -139,7 +140,7 @@ header.header-area.style-2 .header-top-contact {
 }
 /*header top right*/
 .header-top-contact {
-  float: right;
+  float: left;
   padding: 39px 0 10px;
 }
 .header-top-contact ul {
@@ -1496,7 +1497,7 @@ footer.footer-area::before {
   background-color: rgba(0, 0, 0, 0.4);
 }
 footer.footer-area {
-  background-color: rgb(10, 11, 13);
+  background-image: url(../img/bg/footer.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
